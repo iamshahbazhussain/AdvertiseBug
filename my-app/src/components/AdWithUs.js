@@ -416,7 +416,7 @@ export default function AdWithUs() {
               value={description}
               rows={6}
               name="post"
-              label="Advertisement Description: (300 character limit)"
+              label={`Advertisement Description: (${description.length}/300 character limit)`}
               id="post"
               onChange={(event) => event.target.value && event.target.value.length <= 300 ? setDescription(event.target.value) : null}
             />
@@ -480,7 +480,7 @@ export default function AdWithUs() {
         </Grid>
       </Box>
       <Payment dataFromParent={{ title, description, singleFile: singleFile, subject: mainCategory, subsubject: subCategory, company, link, disabled_cells: top_cells }}></Payment>
-     
+
     </div>
   );
 }
