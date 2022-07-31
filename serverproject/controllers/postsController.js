@@ -40,7 +40,7 @@ const searchPost = async (req, res, next) => {
                 for (let index = 0; index < response.length; index++) {
                     const post = response[index];
                     result.push({
-                        ...post,
+                        ...post._doc,
                         border: 'blue'
                     });
                 }
