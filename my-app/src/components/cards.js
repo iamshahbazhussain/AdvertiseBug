@@ -40,7 +40,8 @@ export default function AdCard( data ){
     }
 
     const truncateString = ( string, length ) => {
-        if( string.length > length ){
+        console.log("***********", string , length);
+        if( string && string.length > length ){
           return string.substring(0, length)+'...';
         }
         return string

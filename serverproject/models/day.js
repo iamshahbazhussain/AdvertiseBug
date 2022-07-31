@@ -15,6 +15,6 @@ let daySchema = new Schema({
 
 }, { timestamps: true });
 
-daySchema.index({ createdAt: 1 }, { expires: "2m" })
+daySchema.index({ createdAt: 1 }, { expires: "2880m" })
 
 module.exports = mongoose.model('Day', daySchema);

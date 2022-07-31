@@ -22,5 +22,7 @@ let postSchema = new Schema({
  
 });
 
+postSchema.index({ createdAt: 1 }, { expires: "2880m" })
+
 module.exports = mongoose.model('Post', postSchema);
 
